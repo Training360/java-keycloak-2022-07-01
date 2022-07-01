@@ -74,3 +74,18 @@ Username: `johndoe`
 Password: `johndoe`
 Scope: `openid`
 
+## OpenLDAP
+
+```
+docker exec -it a60 ldapsearch -H ldap://localhost:1389 -D "cn=admin,dc=example,dc=org" -w admin -b "ou=users,dc=example,dc=org"
+```
+
+Edit mode: writeable
+Vendor: other
+User object class: inetOrgPerson
+Connection url: ldap://openldap:1389
+Users DN: ou=users,dc=example,dc=org
+Bind DN: cn=admin,dc=example,dc=org
+Bind credential: admin
+Trust e-mail ON
+
