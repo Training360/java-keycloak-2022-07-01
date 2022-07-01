@@ -56,3 +56,21 @@ Felhasználó létrehozása
 http://keycloak.training:8080/auth/realms/employees/.well-known/openid-configuration
 http://keycloak.training:8080/auth/realms/employees/protocol/openid-connect/certs
 ```
+
+## Backend tesztelése
+
+```
+curl http://employees.training:8082/api/employees
+curl --header "Authorization: bearer xxxxx" http://employees.training:8082/api/employees
+```
+
+## Backend tesztelése Postmannel
+
+Token name: `john`
+Grant type: `Password credentials`
+Access token url: `http://keycloak.training:8080/auth/realms/employees/protocol/openid-connect/token`
+Client id: `employees-ui`
+Username: `johndoe`
+Password: `johndoe`
+Scope: `openid`
+
